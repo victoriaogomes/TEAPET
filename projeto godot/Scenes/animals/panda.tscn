@@ -1,0 +1,88 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://sprites/animals/panda/bellly.png" type="Texture" id=1]
+[ext_resource path="res://sprites/animals/panda/happyFace.png" type="Texture" id=2]
+[ext_resource path="res://sprites/animals/panda/rightEar.png" type="Texture" id=3]
+[ext_resource path="res://sprites/animals/panda/leftEar.png" type="Texture" id=4]
+[ext_resource path="res://sprites/animals/panda/rightLeg.png" type="Texture" id=5]
+[ext_resource path="res://sprites/animals/panda/leftLeg.png" type="Texture" id=6]
+[ext_resource path="res://sprites/animals/panda/heaps.png" type="Texture" id=7]
+[ext_resource path="res://sprites/animals/panda/leftArm.png" type="Texture" id=8]
+[ext_resource path="res://sprites/animals/panda/rightArm.png" type="Texture" id=9]
+[ext_resource path="res://sprites/animals/panda/head.png" type="Texture" id=10]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 438.944
+height = 382.073
+
+[node name="Node2D" type="KinematicBody2D"]
+position = Vector2( 139.933, 340.698 )
+scale = Vector2( 0.559997, 0.559999 )
+__meta__ = {
+"_edit_ik_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 289.788, 295.507 )
+shape = SubResource( 1 )
+
+[node name="heaps" type="Sprite" parent="."]
+position = Vector2( 294.154, 553.857 )
+texture = ExtResource( 7 )
+
+[node name="leg_right" type="Sprite" parent="heaps"]
+position = Vector2( 125.13, 223.486 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="leg_left" type="Sprite" parent="heaps"]
+position = Vector2( -114.237, 231.726 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="body" type="Sprite" parent="."]
+position = Vector2( 294.078, 468.032 )
+texture = ExtResource( 1 )
+
+[node name="leftEar" type="Sprite" parent="body"]
+position = Vector2( -288.854, -537.957 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="rightEar" type="Sprite" parent="body"]
+position = Vector2( 256.239, -537.091 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="arm_left" type="Sprite" parent="body"]
+position = Vector2( -228.769, -11.4147 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="arm_right" type="Sprite" parent="body"]
+position = Vector2( 247.242, -15.7712 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="head" type="Sprite" parent="body"]
+position = Vector2( -17.6946, -382.121 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="face" type="Sprite" parent="body"]
+position = Vector2( -11.2751, -321.028 )
+texture = ExtResource( 2 )
